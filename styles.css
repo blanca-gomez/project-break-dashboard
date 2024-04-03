@@ -1,0 +1,56 @@
+body{
+    background-color: red;
+    display:block;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+/*--------------- Contraseña ---------------------------------*/
+.password-container{
+    text-align: center;
+}
+
+.password-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.password{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#generate-password {
+    margin-top: 10px; 
+}
+
+#password-result {
+    margin-top: 10px;
+    font-size: 30px; 
+}
+/*--------------- Contraseña ---------------------------------*/
+
+
+
+/*--------------- reloj ---------------------------------*/
+.clock-container{
+    background-color: gray;
+    text-align: center;
+    padding: 30px;
+}
+
+.clock{
+    font-size: 4em;
+    font-weight: bold;
+}
+
+
+.date{
+    font-size: 2em;
+ 
+}
+/*--------------- reloj ---------------------------------*/

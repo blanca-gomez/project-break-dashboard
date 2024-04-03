@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyect Break</title>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <!--Genereador de contraseñas-->
+    <div class="password-container">
+        <div class="password-title">
+            <h1>Crea tu contraseña</h1>
+            <span class="material-symbols-outlined">lock</span>
+        </div>
+        <div class="password">
+            <label>Número de caracteres</label>
+            <input type="number" min="12" max="50" id="inputLength">
+            <button type="button" id="generate-password">Generar contraseña</button>
+        </div>
+        <div id="password-result"></div>
+    </div>
+    <!--Genereador de links-->
+    <div class="links">
+        <div class="links-title">
+            <h1>Añade tu enlace de interés</h1>
+            <span class="material-symbols-outlined">link</span>
+        </div>
+        <div class="links-input">
+            <input id="URL-name" value="Nombre del enlace"/>
+            <input id="URL" value="URL del enlace"/>
+            <button type="button" id="generate-link">AÑADIR ENLACE</button>
+        </div>
+        <div id="links-results"></div>
+    </div>
+    <!--reloj 24h-->
+    <div class="clock-container">
+        <div id="clock" class="clock"></div>
+        <div id="date" class="date"></div>
+        <div id="message" class="message"></div>
+    </div>
+    <!--estación-meteorológica-->
+    <div class="container-weather">
+        <div id="weather-information">
+            <p id="location"></p>
+            <p id="weather-condition"></p>
+            <img id="weather-icon">
+            <p id="temperature"></p>
+            <p id="precipitation"></p>
+            <p id="humidity"></p>
+            <p id="wind"></p>
+        </div>
+        <div id="current-wather">
+            
+        </div>
+
+
+
+    </div>
+    
+    
+
+
+
+
+
+
+
+    <script src="/proyect-break-1/script.js"></script>
+    <script src="/proyect-break-1/listado-links/script.js"></script>
+    <script src="/proyect-break-1/reloj/script.js"></script>
+    <script src="/proyect-break-1/estacion-meteorologica/script.js"></script>
+
+</body>
+</html>
