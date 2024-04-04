@@ -4,6 +4,8 @@ let buttonLinks= document.getElementById('generate-link');
 let linksList = document.getElementById('links-results');
 
 
+let persistentLinkList = [];
+
 const createListElement = (name, urlInput) => {
     const listItem = document.createElement('li');
     listItem.innerHTML = `<a href=${urlInput} target="_blank">${name}</a>`;
@@ -30,7 +32,10 @@ const handleNewLink = () => {
     linksList.appendChild(newListItem);
     newListItem.appendChild(removeButton);
     
-    localStorage.setItem(name, urlInput);
+    //localStorage.setItem(name, urlInput);
+    persistentLinkList.push(urlInput);
+    let jsonLinkList = JSON.stringify(persistentLinkList);
+    localStorage.setItem(name, jsonLinkList);
 }
 
 

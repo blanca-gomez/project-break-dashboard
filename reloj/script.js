@@ -16,7 +16,7 @@ const getcurrentTime = () => {
         message= 'Buenas tardes, el último empujón'
     }else if (hours >=18 && hours <20){
         message= 'Esto ya son horas extras, ... piensa en parar pronto'
-    }else if(hours >= 20 && hours <0){
+    }else if(hours >= 20 && hours <24){
         message = 'Buenas noches, es hora de pensar en parar y descansar'
     }
     return  {
