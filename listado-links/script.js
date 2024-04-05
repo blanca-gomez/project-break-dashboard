@@ -32,7 +32,6 @@ const handleNewLink = () => {
     linksList.appendChild(newListItem);
     newListItem.appendChild(removeButton);
     
-    //localStorage.setItem(name, urlInput);
     persistentLinkList.push(urlInput);
     let jsonLinkList = JSON.stringify(persistentLinkList);
     localStorage.setItem(name, jsonLinkList);

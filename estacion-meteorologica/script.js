@@ -12,11 +12,9 @@ fetch(endpoint)
     .then((data) => {
         console.log(data);
        
-        showLocation(data['location']);
-        /*const temperature = document.getElementById('temperature');
-        temperature.innerHTML = `<p>${data['current']['temp_c']}</p>`
-        let jsonCurrent = data['current'];
-        let temp = jsonCurrent['temp_c'];*/
+        showLocation(data.location);
+        showWeatherCondition(data.current);
+        
     })
     .catch((error) => {
         console.error('Error:', error);
@@ -24,7 +22,36 @@ fetch(endpoint)
 
 const showLocation = (location) => {
     const locationText = document.getElementById('location');
-    let locName = location['name'];
-    let country = location ['country'];
+    const locName = location.name;
+    const country = location.country;
     locationText.innerHTML = `<p>${locName}/${country}</p>`;
-}
+};
+
+const showWeatherCondition = (current) => {
+    const weatherConditionText = document.getElementById('weather-condition');
+    const currentTemperature  = document.getElementById('temperature');
+    const temperatureIcon = document.getElementById('weather-icon');
+    const precipitations = document.getElementById('precipitation');
+    const humidity = document.getElementById('humidity');
+    const wind = document.getElementById('wind');
+
+
+    const weatherConditionName = current.condition.text;
+    const currentTemperatureDegrees = current.temp_c;
+    const currentTemperatureIcon = current.condition.icon;
+    const currentPrecipitationText = current.precip_in;
+    const currentHumidityText = current.humidity;
+    const currentWindText = current.wind_kph;
+
+
+    weatherConditionText.innerHTML = `<p>${weatherConditionName}</p>`;
+    currentTemperature.innerHTML = `<p>${currentTemperatureDegrees}Cº</p>`;
+    temperatureIcon.src = currentTemperatureIcon;
+    precipitations.innerHTML = `<p>Precipitaciones: ${currentPrecipitationText}%</p>`;
+    humidity.innerHTML = `<p>Humedad: ${currentHumidityText}%</p>`;
+    wind.innerHTML = `<p>Viento: ${currentWindText}km/h</p>`;
+};
+
+
+
+

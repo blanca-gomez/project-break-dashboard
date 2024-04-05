@@ -54,3 +54,38 @@ body{
  
 }
 /*--------------- reloj ---------------------------------*/
+
+/*----------------Wheather----------------------*/
+.container-weather{
+    border: 1px solid black;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: blueviolet;    
+}
+.weather-location{
+    background-color: blue;
+}
+
+.content{
+    background-color: yellow;
+    display: flex;
+    
+}
+
+.weather-images{
+    background-color: bisque;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.weather-information{
+    background-color: rosybrown;
+}
+
+.weather-information ul {
+    list-style: none;
+}
+/*----------------Wheather----------------------*/
+
