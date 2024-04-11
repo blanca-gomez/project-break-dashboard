@@ -10,10 +10,9 @@ fetch(endpoint)
         return response.json();
     })
     .then((data) => {
-        console.log(data);
-       
         showLocation(data.location);
         showWeatherCondition(data.current);
+        showCurrentlWeather(data.forecast)
         
     })
     .catch((error) => {
@@ -35,13 +34,15 @@ const showWeatherCondition = (current) => {
     const humidity = document.getElementById('humidity');
     const wind = document.getElementById('wind');
 
-
-    const weatherConditionName = current.condition.text;
+    //destructuring
+    /*const weatherConditionName = current.condition.text;
     const currentTemperatureDegrees = current.temp_c;
     const currentTemperatureIcon = current.condition.icon;
     const currentPrecipitationText = current.precip_in;
     const currentHumidityText = current.humidity;
-    const currentWindText = current.wind_kph;
+    const currentWindText = current.wind_kph;*/
+    const { condition: { text: weatherConditionName, icon: currentTemperatureIcon }, 
+    temp_c: currentTemperatureDegrees, precip_in: currentPrecipitationText, humidity: currentHumidityText, wind_kph: currentWindText } = current;
 
 
     weatherConditionText.innerHTML = `<p>${weatherConditionName}</p>`;
@@ -52,6 +53,38 @@ const showWeatherCondition = (current) => {
     wind.innerHTML = `<p>Viento: ${currentWindText}km/h</p>`;
 };
 
+const showCurrentlWeather = (forecast) => {
+    const currentWeatherText = document.getElementById('current-weather');
+
+    const forecastDay = forecast.forecastday;
+    const currentForecast = forecastDay[0];
+    const hours = currentForecast.hour;
+
+
+    currentWeatherText.innerHTML = '';
+    
+
+    hours.forEach (hour => {
+        const time = hour.time;
+        const celsius = hour.temp_c;
+        const hourIcon = hour.condition.icon;
+
+        //dividir cadena de texto time, para obtener solo la hora. time= 'FECHA HORA'
+        const timeParts = time.split(' ');
+        const timeHours = timeParts[1];
+
+        const hourElement = document.createElement('div');
+        hourElement.classList.add('hours');
+
+        hourElement.innerHTML = `
+        <p>${timeHours}</p>` +
+        `<img src=${hourIcon}>`+
+        `<p>${celsius}ºC</p>`;
+
+        currentWeatherText.appendChild(hourElement);
+
+    })
+}  
 
 
 

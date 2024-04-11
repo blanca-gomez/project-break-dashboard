@@ -1,14 +1,38 @@
 body{
-    background-color: red;
     display:block;
     justify-content: center;
     align-items: center;
-   
 }
+
+/*----------------HEADER--------------------------------------*/
+header {
+    border-bottom: 1px solid #ccc; /
+    padding-bottom: 10px; 
+}
+header nav ul {
+    list-style-type: none;
+    padding: 15px;
+    margin: 0;
+    display: flex; 
+    justify-content: center;
+    gap: 20px;
+    font-size: 20px;
+    
+}
+
+header nav ul li {
+    margin-right: 20px; 
+}
+
 
 /*--------------- Contraseña ---------------------------------*/
 .password-container{
-    text-align: center;
+    max-width: 45%; 
+    width: auto;
+    margin-top: 50px; 
+    margin-right: 40px;
+    margin-bottom: 50px;
+    float: right; 
 }
 
 .password-title{
@@ -33,59 +57,121 @@ body{
     font-size: 30px; 
 }
 /*--------------- Contraseña ---------------------------------*/
-
-
-
-/*--------------- reloj ---------------------------------*/
-.clock-container{
-    background-color: gray;
-    text-align: center;
-    padding: 30px;
+/*---------------- ----Links ---------------------------------*/
+.links {
+    max-width: 45%; 
+    width: auto; 
+    margin-top: 50px; 
+    margin-left: 40px;
+    float: left; 
+    margin-bottom: 50px;
+}
+.links-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.clock{
-    font-size: 4em;
+.links .links-input .input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.links .links-input .input-container label {
+    margin-right: 10px;
+}
+
+.links .links-input {
+    margin-bottom: 10px; 
+}
+.delete-item {
+    margin-left: 10px; 
+}
+
+/*--------------- ----- Links---------------------------------*/
+/*--------------- reloj ---------------------------------*/
+.clock-container {
+    background-color: #eee;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 400px; 
+    width: 80%; 
+    margin-top: 20px; 
+    text-align: center; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+.clock {
+    font-size: 3rem;
     font-weight: bold;
 }
 
-
-.date{
-    font-size: 2em;
- 
+.date,
+.message {
+    font-size: 1.5rem;
+    margin-top: 10px;
 }
 /*--------------- reloj ---------------------------------*/
 
 /*----------------Wheather----------------------*/
-.container-weather{
-    border: 1px solid black;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    background-color: blueviolet;    
-}
-.weather-location{
-    background-color: blue;
+.container-weather {
+    width: 80%; 
+    margin: 50px auto 20px auto; 
+    border: 2px solid #ccc; 
+    border-radius: 8px;
+    padding: 10px; 
+    overflow-y: scroll; 
+    max-height: 300px; 
+    background-color: #eee;
 }
 
-.content{
-    background-color: yellow;
+.weather-container {
     display: flex;
-    
+    flex-direction: column;
+    height: 100%; 
+    overflow: hidden;
+}
+
+.content {
+    flex: 1; 
+}
+
+#current-weather {
+    overflow-y: auto; 
+    padding: 10px; 
+}
+.weather-location{
+    maRgin-bottom: -15px;   
+}
+.content{
+    display: flex;
 }
 
 .weather-images{
-    background-color: bisque;
+    
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-.weather-information{
-    background-color: rosybrown;
-}
+
 
 .weather-information ul {
     list-style: none;
 }
+
+
+.hours{
+    display: flex;
+    flex-direction: column;
+}
+
+#current-weather{
+    display: flex;
+}
+
+
 /*----------------Wheather----------------------*/
 
