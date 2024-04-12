@@ -47,7 +47,8 @@ const showWeatherCondition = (current) => {
 
     weatherConditionText.innerHTML = `<p>${weatherConditionName}</p>`;
     currentTemperature.innerHTML = `<p>${currentTemperatureDegrees}Cº</p>`;
-    temperatureIcon.src = currentTemperatureIcon;
+    let httpUrl = "https:";
+    temperatureIcon.src = httpUrl + currentTemperatureIcon;
     precipitations.innerHTML = `<p>Precipitaciones: ${currentPrecipitationText}%</p>`;
     humidity.innerHTML = `<p>Humedad: ${currentHumidityText}%</p>`;
     wind.innerHTML = `<p>Viento: ${currentWindText}km/h</p>`;
@@ -76,15 +77,15 @@ const showCurrentlWeather = (forecast) => {
         const hourElement = document.createElement('div');
         hourElement.classList.add('hours');
 
-        hourElement.innerHTML = `
-        <p>${timeHours}</p>` +
-        `<img src=${hourIcon}>`+
+        let httpUrl = "https:";
+        hourElement.innerHTML = 
+        `<p>${timeHours}</p>` +
+        `<img src="${httpUrl + hourIcon}" style="width: 50px; height: auto;">`+
         `<p>${celsius}ºC</p>`;
 
         currentWeatherText.appendChild(hourElement);
 
     })
 }  
-
 
 
