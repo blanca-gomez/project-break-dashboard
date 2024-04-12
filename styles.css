@@ -6,9 +6,9 @@ body{
 
 /*----------------HEADER--------------------------------------*/
 header {
-    border-bottom: 1px solid #ccc; /
+    border-bottom: 2px solid #ccc; 
     padding-bottom: 10px; 
-}
+}   
 header nav ul {
     list-style-type: none;
     padding: 15px;
@@ -16,22 +16,39 @@ header nav ul {
     display: flex; 
     justify-content: center;
     gap: 20px;
-    font-size: 20px;
-    
+    font-size: 20px; 
+    font-family: "Lobster", sans-serif;
+    font-weight: 500;
+    font-style: normal;   
 }
 
 header nav ul li {
     margin-right: 20px; 
 }
+header nav ul li a {
+    color: #2E4053; 
+}
 
+header nav ul li:nth-child(1) .material-symbols-outlined {
+    color:#922B21; 
+}
+header nav ul li:nth-child(2) .material-symbols-outlined {
+    color:#E4F609 ; 
+}
 
+header nav ul li:nth-child(3) .material-symbols-outlined {
+    color:#00CC00; 
+}
+
+header nav ul li:nth-child(4) .material-symbols-outlined {
+    color:#0967F6 ; 
+}
 /*--------------- Contraseña ---------------------------------*/
 .password-container{
     max-width: 45%; 
     width: auto;
     margin-top: 50px; 
     margin-right: 40px;
-    margin-bottom: 50px;
     float: right; 
 }
 
@@ -39,6 +56,17 @@ header nav ul li {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: "Lobster", sans-serif;
+    font-weight: 500;
+    font-style: normal; 
+    font-size: 20px;
+    color: black;
+    margin-bottom: -15px;
+}
+
+.password-title .material-symbols-outlined {
+    color:#00CC00;
+    font-weight: bold;
 }
 
 .password{
@@ -46,10 +74,35 @@ header nav ul li {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-top: 5px;
+    margin-top: -20px;
+}
+
+.password label{
+    font-family: "Lobster", sans-serif;
+    font-weight: 500;
+    font-style: normal; 
+    font-size: 15px;
+}
+
+.password input {
+    background-color: #ccc;
+    width: 40px;
+    height: 30px;
+    border-radius: 5px;
+
 }
 
 #generate-password {
     margin-top: 10px; 
+    font-family: "Lobster", sans-serif;
+    font-weight: 500;
+    font-style: normal; 
+    font-size: 15px;
+    width: 200px;
+    height: 30px;
+    background-color: #FFEFD5;
+    border-radius: 5px;
 }
 
 #password-result {
@@ -70,29 +123,67 @@ header nav ul li {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: "Lobster", sans-serif;
+    font-weight: 500;
+    font-style: normal; 
+    font-size: 20px;
+    color: black;
+}
+.links-title .material-symbols-outlined {
+    color:#E4F609;
+    font-weight: bold;
+    
 }
 
 .links .links-input .input-container {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+
 }
 
 .links .links-input .input-container label {
     margin-right: 10px;
+    
 }
 
 .links .links-input {
     margin-bottom: 10px; 
 }
+
+.links-input {
+    display: flex; 
+    align-items: center; 
+}
+.links-input input {
+    background-color: #ccc;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    margin-right: 10px; 
+}
+
+#generate-link{
+    
+    font-family: "Lobster", sans-serif;
+    font-weight: 500;
+    font-style: normal; 
+    font-size: 15px;
+    width: 200px;
+    height: 30px;
+    background-color: #FFEFD5;
+    border-radius: 5px;
+}
+
 .delete-item {
     margin-left: 10px; 
+    background-color: #BC8F8F;
 }
 
 /*--------------- ----- Links---------------------------------*/
 /*--------------- reloj ---------------------------------*/
 .clock-container {
-    background-color: #eee;
+    background-color: #FFEFD5;
     border: 2px solid #ccc;
     border-radius: 8px;
     padding: 20px;
@@ -110,7 +201,10 @@ header nav ul li {
 
 .date,
 .message {
-    font-size: 1.5rem;
+    font-family: "Lobster", sans-serif;
+    font-size: 1.5em;
+    font-weight: 500;
+    font-style: normal; 
     margin-top: 10px;
 }
 /*--------------- reloj ---------------------------------*/
@@ -124,7 +218,7 @@ header nav ul li {
     padding: 10px; 
     overflow-y: scroll; 
     max-height: 300px; 
-    background-color: #eee;
+    background-color: #E6E6FA;
 }
 
 .weather-container {
@@ -138,22 +232,39 @@ header nav ul li {
     flex: 1; 
 }
 
+#current-weather,
+.weather-location,
+.content {
+    font-family: "Lobster", sans-serif;
+    font-weight: 500;
+    font-style: normal; 
+}
+
 #current-weather {
     overflow-y: auto; 
     padding: 10px; 
+    color: #6495ED;
+    
 }
 .weather-location{
-    maRgin-bottom: -15px;   
+    margin-bottom: -15px;
+    color:#1E90FF;
+    font-size: 20px;
 }
 .content{
     display: flex;
+    color:	#7B68EE;
 }
 
 .weather-images{
-    
     display: flex;
     gap: 10px;
     align-items: center;
+}
+
+#weather-icon {
+    width: 100px; 
+    height: 100px; 
 }
 
 
